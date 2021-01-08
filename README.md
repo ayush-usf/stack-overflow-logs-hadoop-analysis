@@ -3,7 +3,7 @@
 The project involves extracting data from several smaller datasets and combining them together to do analysis.
 
 #### Glossary
-- [SentimentAnalysis](./src/main/java/edu/usfca/cs/mr/util/SentimentAnalysis.java) : Calculates the overall sentiment from the list of provided tokens, extracted from text.
+- [SentimentAnalysis](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/util/SentimentAnalysis.java) : Calculates the overall sentiment from the list of provided tokens, extracted from text.
 
 ### Dataset
 The dataset contains logs for askubuntu stackexchange logs (https://askubuntu.com) in XML format.
@@ -37,7 +37,7 @@ gs://stackoverflow-dataset-677
 
 ### Glossary
 
-- [SentimentAnalysis](./src/main/java/edu/usfca/cs/mr/util/SentimentAnalysis.java) : Calculates the overall sentiment from the list of provided tokens, extracted from text.
+- [SentimentAnalysis](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/util/SentimentAnalysis.java) : Calculates the overall sentiment from the list of provided tokens, extracted from text.
 
 ### Compiling the project
 - Remember to compile the project, before running jobs (if not done for previous section)
@@ -47,12 +47,12 @@ gs://stackoverflow-dataset-677
 ###  Analysis
 #### 1. Finding the Top 5 posts with sentiments
     
-  > [edu.usfca.cs.mr.stack_overflow_top5_posts](./src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts)
+  > [edu.usfca.cs.mr.stack_overflow_top5_posts](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts)
             
-  [WeeklyPostCountJob.java](./src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts/WeeklyPostCountJob.java)        
-  [TweetMapper.java](./src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts/TweetMapper.java)        
+  [WeeklyPostCountJob.java](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts/WeeklyPostCountJob.java)        
+  [TweetMapper.java](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts/TweetMapper.java)        
   [TweetWritable.java](.src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts/TweetWritable.java)        
-  [TweetCountReducer.java](./src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts/TweetCountReducer.java)        
+  [TweetCountReducer.java](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_top5_posts/TweetCountReducer.java)        
   - Usage:
       ```
       <Job.java> <input_file_location> <output_file_location> <positive_word_file_path> <negative_word_file_path>
@@ -107,12 +107,12 @@ gs://stackoverflow-dataset-677
   
 #### 2. Location-wise top 5 Users with Highest Reputation, ordered by highest upvotes
      
-> [edu.usfca.cs.mr.stack_overflow_highest_rep_users](./src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users)
+> [edu.usfca.cs.mr.stack_overflow_highest_rep_users](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users)
        
-  [HighestRepUserCountJob.java](./src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users/HighestRepUserCountJob.java)        
-  [HighestRepUserMapper.java](./src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users/HighestRepUserMapper.java)                
-  [HightestRepUserReducer.java](./src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users/HightestRepUserReducer.java)        
-  [LocationWritable.java](./src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users/LocationWritable.java)
+  [HighestRepUserCountJob.java](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users/HighestRepUserCountJob.java)        
+  [HighestRepUserMapper.java](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users/HighestRepUserMapper.java)                
+  [HightestRepUserReducer.java](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users/HightestRepUserReducer.java)        
+  [LocationWritable.java](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_highest_rep_users/LocationWritable.java)
   - Usage:
       ```
       <Job.java> <input_file_location> <output_file_location>
@@ -146,7 +146,7 @@ gs://stackoverflow-dataset-677
 ### 3. Extracting top 5 postIds from comments 
 Analyzing Comments file from stackoverflow data, to find the top 5 postIds, the **sentiment associated** with these comments, the **users who have made these comments**, their **scores**, **dates** on which these comments are made etc.
 
-> [edu.usfca.cs.mr.stack_overflow_top_5_postIds](src/main/java/edu/usfca/cs/mr/stack_overflow_top_5_postIds)
+> [edu.usfca.cs.mr.stack_overflow_top_5_postIds](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_top_5_postIds)
     
   - File Path :`/home/ayush/comments.xml`
   
@@ -155,7 +155,7 @@ Analyzing Comments file from stackoverflow data, to find the top 5 postIds, the 
 ### 4. To find the top 5 tags
 Analyzing Tags file from stackoverflow data, to find the top 5 tags, the excerptPostId and wikiPostId etc and displaying the data through the Reducer.
 
-> [edu.usfca.cs.mr.stack_overflow_top_5_tags](src/main/java/edu/usfca/cs/mr/stack_overflow_top_5_tags)
+> [edu.usfca.cs.mr.stack_overflow_top_5_tags](https://github.com/ayush-usf/stack-overflow-logs-hadoop-analysis/tree/main/src/main/java/edu/usfca/cs/mr/stack_overflow_top_5_tags)
 
 - File Path :`/home/ayush/tags.xml`
 	
